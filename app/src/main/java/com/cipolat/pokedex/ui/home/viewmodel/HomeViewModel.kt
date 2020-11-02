@@ -8,7 +8,6 @@ import kotlinx.coroutines.Dispatchers
 class HomeViewModel(private val repository: PokeRepository) : ViewModel() {
 
     fun giveMePokemons() = liveData(Dispatchers.IO) {
-        val response = repository.getPokemons()
-        emit(response.body())
+        emit( repository.getPokemons())
     }
 }
