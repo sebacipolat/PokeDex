@@ -6,7 +6,6 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.cipolat.pokedex.R
 import com.cipolat.pokedex.data.api.HttpClient
 import com.cipolat.pokedex.data.api.service.ApiInteractor

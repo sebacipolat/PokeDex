@@ -19,11 +19,13 @@ class PokemonItemViewHolder(
 
     fun bindItem(pokemon: Pokemon) {
         this.pokemon = pokemon
-        view.name_lbl.text=pokemon.name
-        Glide.with(view.context).load("https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png").into(view.icon);
+        view.name_lbl.text=pokemon.name.capitalize()
+        Glide.with(view.context).load(pokemon.url.getPokeImage()).into(view.icon);
     }
 
     override fun onClick(view: View?) {
         //callback.onAddressClick(prediction)
     }
+
+
 }
