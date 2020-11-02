@@ -11,7 +11,12 @@ class PokeRepository(var interactor: ApiInteractor) {
 
     suspend fun getPokemons():Resource<Response<PokeListResponse>>{
         return try {
-            return responseHandler.handleSuccess(interactor.getPokemonsFromApi())
+            var response=interactor.getPokemonsFromApi()
+            return if (response.isSuccessful){
+                responseHandler.handleSuccess(response)
+            }else{
+                return Resource.error(response.code().toString(), null)
+            }
         } catch (e: Exception) {
             responseHandler.handleException(e)
         }

@@ -20,7 +20,6 @@ open class ResponseHandler {
             else -> Resource.error(getErrorMessage(Int.MAX_VALUE), null)
         }
     }
-
     private fun getErrorMessage(code: Int): String {
         return when (code) {
             ErrorCodes.SocketTimeOut.code -> "Timeout"
