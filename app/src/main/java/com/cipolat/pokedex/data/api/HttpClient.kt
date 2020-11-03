@@ -15,14 +15,14 @@ object HttpClient {
         return Retrofit.Builder().client(okHttpClient)
             .addConverterFactory(
                 GsonConverterFactory.create())
-            .baseUrl("https://run.mocky.io/v3/")
+            .baseUrl(BuildConfig.BASE_URL)
             .build()
     }
     val apiService: PokeApiService = getRetrofit().create(
         PokeApiService::class.java)
 }
 
+//            .baseUrl("https://run.mocky.io/v3/")
 
-
-        //            .baseUrl(BuildConfig.BASE_URL)
+        //
 
