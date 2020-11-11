@@ -6,7 +6,7 @@ import org.junit.Test
 
 class PokemonUrlExtensionTest {
     @Test
-    fun addition_isCorrect() {
+    fun getPokeImage_test() {
         val url="https://pokeapi.co/api/v2/language/12/"
         val expectedUrl="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png"
         val newUrl=url.getPokeImage()
